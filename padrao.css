@@ -76,3 +76,6 @@ body.maintenance{background:#f0f5f8;color:#243746;--maintenance:#0057b8}
 
 .portal-brand .ladle-live{display:block;width:100px;height:100px;object-fit:contain;flex:none}
 .portal-header h1{text-align:center}
+.portal-brand .simec-mark{width:min(360px,55vw);height:auto;object-fit:contain;border-radius:0}
+.maintenance .brand img{width:min(360px,70vw);height:auto;object-fit:contain;background:transparent;border-radius:0}
+@media(max-width:600px){.portal-brand .simec-mark{width:min(260px,70vw)}.maintenance .brand img{width:min(280px,80vw)}}
