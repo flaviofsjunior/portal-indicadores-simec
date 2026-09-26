@@ -79,3 +79,13 @@ body.maintenance{background:#f0f5f8;color:#243746;--maintenance:#0057b8}
 .portal-brand .simec-mark{width:min(360px,55vw);height:auto;object-fit:contain;border-radius:0}
 .maintenance .brand img{width:min(360px,70vw);height:auto;object-fit:contain;background:transparent;border-radius:0}
 @media(max-width:600px){.portal-brand .simec-mark{width:min(260px,70vw)}.maintenance .brand img{width:min(280px,80vw)}}
+
+/* Cabeçalho final: marca à esquerda, título central e animação à direita. */
+.portal-header-inner{display:grid;grid-template-columns:minmax(220px,280px) minmax(260px,1fr) 130px;grid-template-rows:auto auto;gap:8px 30px;align-items:center;min-height:165px;padding:22px 32px}
+.portal-brand{display:contents}
+.portal-brand .simec-mark{grid-column:1;grid-row:1/3;width:250px;max-width:100%;height:auto;justify-self:start}
+.portal-brand .ladle-live{grid-column:3;grid-row:1/3;width:115px;height:115px;justify-self:end;align-self:center}
+.portal-header h1{grid-column:2;grid-row:1;text-align:center;align-self:end;margin:0;font-size:29px;line-height:1.2}
+.portal-header h1 span{display:block;margin-top:5px;font-size:21px;letter-spacing:1.2px}
+.portal-header p{grid-column:2;grid-row:2;text-align:center;align-self:start;margin:0}
+@media(max-width:760px){.portal-header-inner{grid-template-columns:minmax(150px,1fr) 100px;grid-template-rows:auto auto auto;gap:8px 18px}.portal-brand .simec-mark{grid-column:1;grid-row:1;width:min(250px,100%)}.portal-brand .ladle-live{grid-column:2;grid-row:1;width:95px;height:95px}.portal-header h1{grid-column:1/3;grid-row:2;align-self:center;font-size:25px}.portal-header h1 span{font-size:18px}.portal-header p{grid-column:1/3;grid-row:3}}

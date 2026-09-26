@@ -20,7 +20,8 @@
       .simec-login{position:fixed;inset:0;z-index:2147483646;display:grid;place-items:center;padding:24px;background:linear-gradient(145deg,#eef4f8,#dce9f1);font-family:"Segoe UI",Arial,sans-serif;color:#172d42}
       .simec-login-card{width:min(430px,100%);background:#fff;border-radius:16px;padding:34px;box-shadow:0 24px 70px #0b294033;border-top:5px solid #151e75}
       .simec-login-logo{display:block;width:min(310px,100%);height:auto;margin:22px auto 24px}
-      .simec-login h1{text-align:center;margin:0;color:#151e75;font-size:27px;letter-spacing:.8px}
+      .simec-login h1{text-align:center;margin:0;color:#151e75;font-size:25px;letter-spacing:.8px;line-height:1.25}
+      .simec-login h1 span{display:block;font-size:18px;margin-top:5px;letter-spacing:1.2px}
       .simec-login p{text-align:center;margin:0 0 25px;color:#657482;line-height:1.5}
       .simec-login label{display:block;color:#334b5e;font-size:14px;font-weight:600;margin-bottom:7px}
       .simec-login input{width:100%;height:48px;border:1px solid #b9c8d4;border-radius:8px;padding:10px 13px;font:18px "Segoe UI",Arial,sans-serif;color:#172d42;background:#fff}
@@ -72,7 +73,7 @@
     const overlay = document.createElement('div');
     overlay.className = 'simec-login';
     overlay.innerHTML = `<form class="simec-login-card">
-      <h1>PORTAL DE INDICADORES</h1>
+      <h1>PORTAL DE INDICADORES<span>PLANTA 2 SIMEC</span></h1>
       <img class="simec-login-logo" src="assets/grupo-simec-logo.png" alt="Grupo SIMEC — Construindo o futuro">
       <p>Digite sua matrícula nos dois campos para acessar os painéis.</p>
       <label for="simec-matricula">Matrícula</label>
