@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+      <title>Panela de aciaria vazando aço</title><style>
+    
+
+    
+
+    /* Balanço de vazamento */
+    .ladle-tilt-rig {
+      transform-origin: 105px 68px;
+      animation: pourCycle 4.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes pourCycle {
+      0%   { transform: rotate(0deg); }
+      40%  { transform: rotate(-8deg); }
+      85%  { transform: rotate(-16deg); }
+      100% { transform: rotate(-14deg); }
+    }
+
+    /* Fluxo contínuo de aço líquido */
+    .molten-stream {
+      stroke-dasharray: 60;
+      stroke-dashoffset: 60;
+      animation: steelFlow 1s linear infinite;
+      filter: drop-shadow(0 0 6px #ff6600) drop-shadow(0 0 14px #ff3300);
+    }
+
+    @keyframes steelFlow {
+      0%   { stroke-dashoffset: 60; }
+      100% { stroke-dashoffset: 0; }
+    }
+
+    /* Faíscas incandescentes */
+    .spark {
+      animation: sparkFly 1.5s infinite ease-out;
+    }
+    .sp1 { animation-delay: 0.1s; }
+    .sp2 { animation-delay: 0.4s; }
+    .sp3 { animation-delay: 0.7s; }
+    .sp4 { animation-delay: 1.0s; }
+
+    @keyframes sparkFly {
+      0% {
+        opacity: 0;
+        transform: translate(0, 0) scale(0.6);
+      }
+      40% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: translate(calc(var(--mx, -1) * 18px), calc(var(--my, 1) * -22px)) scale(1.4);
+      }
+    }
+  
+@media(prefers-reduced-motion:reduce){.ladle-tilt-rig,.molten-stream,.spark{animation:none}.molten-stream{stroke-dashoffset:0}}</style><defs>
+        <linearGradient id="liquidSteel" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#fff9d6" />
+          <stop offset="30%" stop-color="#ffb703" />
+          <stop offset="70%" stop-color="#fb8500" />
+          <stop offset="100%" stop-color="#d00000" />
+        </linearGradient>
+
+        <linearGradient id="ladleShell" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#2c333f" />
+          <stop offset="45%" stop-color="#475263" />
+          <stop offset="75%" stop-color="#313947" />
+          <stop offset="100%" stop-color="#1e242d" />
+        </linearGradient>
+
+        <linearGradient id="bandGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#1e242d" />
+          <stop offset="50%" stop-color="#556275" />
+          <stop offset="100%" stop-color="#141820" />
+        </linearGradient>
+      </defs>
+
+      <path d="M 68 8 L 68 50 M 142 8 L 142 50" stroke="#1f2633" stroke-width="6" stroke-linecap="round"/>
+      <path d="M 58 48 L 152 48" stroke="#333c4c" stroke-width="5" stroke-linecap="round"/>
+
+      <g class="ladle-tilt-rig">
+        <path d="M 68 48 L 68 76 Q 68 86 78 86" stroke="#252c38" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <path d="M 142 48 L 142 76 Q 142 86 132 86" stroke="#252c38" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+        <path d="M 66 52 
+                 L 144 52 
+                 Q 148 52 146 58
+                 L 132 142
+                 Q 130 148 124 148
+                 L 86 148
+                 Q 80 148 78 142
+                 L 64 58
+                 Q 62 52 66 52 Z" 
+              fill="url(#ladleShell)" stroke="#11161d" stroke-width="2.5" />
+
+        <path d="M 65 74 Q 105 82 145 74" fill="none" stroke="url(#bandGrad)" stroke-width="3" />
+        <path d="M 69 104 Q 105 112 141 104" fill="none" stroke="url(#bandGrad)" stroke-width="3" />
+        <path d="M 74 130 Q 105 136 136 130" fill="none" stroke="url(#bandGrad)" stroke-width="2.5" />
+
+        <path d="M 85 148 L 125 148" stroke="#11161d" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M 105 138 L 105 148" stroke="#11161d" stroke-width="2.5"/>
+
+        <circle cx="105" cy="86" r="6" fill="#1b2129" stroke="#556275" stroke-width="2"/>
+
+        <path d="M 66 52 Q 52 53 50 62 Q 58 66 65 60 Z" fill="#2d3542" stroke="#11161d" stroke-width="2"/>
+
+        <ellipse cx="105" cy="52" rx="39" ry="8" fill="#19202a" stroke="#11161d" stroke-width="2" />
+        
+        <ellipse cx="105" cy="53" rx="35" ry="6" fill="url(#liquidSteel)" />
+
+        <path class="molten-stream" d="M 52 59 Q 44 88 48 165" 
+              stroke="url(#liquidSteel)" stroke-width="6.5" fill="none" stroke-linecap="round" />
+
+        <ellipse cx="49" cy="168" rx="14" ry="4" fill="url(#liquidSteel)" filter="drop-shadow(0 0 6px #ff6600)"/>
+
+        <circle class="spark sp1" cx="46" cy="120" r="1.8" fill="#fff" style="--mx: -1.2; --my: 1.4;" />
+        <circle class="spark sp2" cx="54" cy="95" r="1.5" fill="#ffb703" style="--mx: 1.5; --my: 1.1;" />
+        <circle class="spark sp3" cx="40" cy="150" r="2.0" fill="#fb8500" style="--mx: -1.8; --my: 0.9;" />
+        <circle class="spark sp4" cx="58" cy="160" r="1.4" fill="#fff" style="--mx: 1.3; --my: 1.6;" />
+      </g>
+    </svg>
