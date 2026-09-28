@@ -40,3 +40,8 @@
  body.printing-schedule .calendar-detail-table{font-size:8px!important;width:100%!important}
  body.printing-schedule .calendar-detail-table th,body.printing-schedule .calendar-detail-table td{padding:4px!important}
 }
+
+/* Mantém as abas acima de todas as telas e visíveis durante a rolagem. */
+.maintenance .backlog-view-tabs{order:1;position:sticky;top:0;z-index:30;background:#f4f1f7;padding-top:4px}
+#programacao-view,#calendario-view,#apontamentos-view,#fluxo-view{order:2}
+
