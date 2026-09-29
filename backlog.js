@@ -1,7 +1,7 @@
 'use strict';
 
 const D=window.SIMEC_DATA||{periodic:[],nonperiodic:[],assets:[]};
-const PEOPLE=(window.SIMEC_PEOPLE||[]).filter(p=>p&&p.id&&p.name&&!/openpyxl|arrayformula\s+object/i.test(String(p.name))).sort((a,b)=>String(a.name).localeCompare(String(b.name),'pt-BR'));
+const PEOPLE=(window.SIMEC_EMPLOYEES?.list()||window.SIMEC_PEOPLE||[]).filter(p=>p&&p.id&&p.name&&!/openpyxl|arrayformula\s+object/i.test(String(p.name))).sort((a,b)=>String(a.name).localeCompare(String(b.name),'pt-BR'));
 const ACCESS=window.SIMEC_ACCESS||{isAdmin:()=>false,canProgram:()=>false,currentId:()=>'',currentName:()=>sessionStorage.getItem('simec_portal_nome_v1')||'Funcionário',roleFor:()=>'leitor'};
 const $=s=>document.querySelector(s);
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -16,19 +16,15 @@ const WEEKDAYS=['Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Se
 const personMap=new Map(PEOPLE.map(p=>[String(p.id),p]));
 const planningMap=new Map((D.planning||[]).map(p=>[String(p.id),p]));
 const assetMap=new Map((D.assets||[]).map(a=>[String(a.code||'').trim().toUpperCase(),a]));
-const areaCounts={};
-(D.periodic||[]).forEach(r=>{if(!r.specialty||!r.area)return;(areaCounts[r.specialty]??={})[r.area]=((areaCounts[r.specialty]||{})[r.area]||0)+1;});
-const areaMap=Object.fromEntries(Object.entries(areaCounts).map(([k,v])=>[k,Object.entries(v).sort((a,b)=>b[1]-a[1])[0]?.[0]||'Outros']));
-
 const parseDate=value=>{if(!value)return null;if(Number.isFinite(Number(value))&&Number(value)>1000)return new Date(Date.UTC(1899,11,30)+Number(value)*86400000);const d=new Date(String(value).slice(0,10)+'T00:00:00');return Number.isNaN(d.valueOf())?null:d;};
 const dateText=value=>{const d=parseDate(value);return d?d.toLocaleDateString('pt-BR'):'—';};
 const ageDays=value=>{const d=parseDate(value);return d?Math.max(0,Math.floor((sourceDate-d)/86400000)):0;};
-const inferredArea=r=>r.area||areaMap[r.specialty]||String(r.specialty||'Outros').split(' - ')[0]||'Outros';
-const assetCode=r=>{const candidates=[r.description,r.asset,r.service];return String(candidates.find(v=>assetMap.has(String(v||'').trim().toUpperCase()))||r.asset||r.description||'Não informado').trim();};
+const inferredArea=r=>r.area||'Não informado';
+const assetCode=r=>String(r.asset||'Não informado').trim();
 const assetInfo=code=>assetMap.get(String(code||'').trim().toUpperCase())||{};
 const buildOrder=(r,classification)=>{const code=assetCode(r),asset=assetInfo(code),area=inferredArea(r);return{
-  id:String(r.id),classification,nature:classification==='Periódica'?'Plano de manutenção':String(r.type||'').toUpperCase()==='PROGRAMADA'?'Corretiva programada':'Corretiva emergencial',
-  plan:classification==='Periódica'?(r.plan||'—'):(r.specialty||r.plan||'—'),area,assetCode:code,assetName:asset.name||r.description||r.asset||'Não informado',family:asset.family||'',costCenter:asset.costCenter||'',workCenter:asset.workCenter||'',
+  id:String(r.id),classification,nature:r.nature||'Não informado',
+  plan:r.plan&&String(r.plan)!=='0'?r.plan:'—',area,assetCode:code,assetName:r.assetName||asset.name||'Não informado',family:asset.family||'',costCenter:asset.costCenter||'',workCenter:asset.workCenter||'',
   specialty:r.specialty||'Não informado',description:r.description||r.assetName||r.service||'Não informada',service:r.service||'—',period:classification==='Periódica'?(r.period||'—'):'Não periódica',status:r.status||'',system:r.system||'',executors:r.executors||'',date:r.date,age:ageDays(r.date),month:r.month||'',
 };};
 const ALL_ORDERS=[...(D.periodic||[]).map(r=>buildOrder(r,'Periódica')),...(D.nonperiodic||[]).map(r=>buildOrder(r,'Não periódica'))];
