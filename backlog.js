@@ -1,6 +1,7 @@
 'use strict';
 
 const D=window.SIMEC_DATA||{periodic:[],nonperiodic:[],assets:[]};
+const CURRENT_YEAR=String(new Date().getFullYear());
 const PEOPLE=(window.SIMEC_EMPLOYEES?.list()||window.SIMEC_PEOPLE||[]).filter(p=>p&&p.id&&p.name&&!/openpyxl|arrayformula\s+object/i.test(String(p.name))).sort((a,b)=>String(a.name).localeCompare(String(b.name),'pt-BR'));
 const ACCESS=window.SIMEC_ACCESS||{isAdmin:()=>false,canProgram:()=>false,currentId:()=>'',currentName:()=>sessionStorage.getItem('simec_portal_nome_v1')||'Funcionário',roleFor:()=>'leitor'};
 const $=s=>document.querySelector(s);
@@ -23,14 +24,14 @@ const inferredArea=r=>r.area||'Não informado';
 const assetCode=r=>String(r.asset||'Não informado').trim();
 const assetInfo=code=>assetMap.get(String(code||'').trim().toUpperCase())||{};
 const buildOrder=(r,classification)=>{const code=assetCode(r),asset=assetInfo(code),area=inferredArea(r);return{
-  id:String(r.id),classification,nature:r.nature||'Não informado',
+  id:String(r.id),classification,nature:r.nature||'Não informado',year:String(r.date||'').slice(0,4),
   plan:r.plan&&String(r.plan)!=='0'?r.plan:'—',area,assetCode:code,assetName:r.assetName||asset.name||'Não informado',family:asset.family||'',costCenter:asset.costCenter||'',workCenter:asset.workCenter||'',
   specialty:r.specialty||'Não informado',description:r.description||r.assetName||r.service||'Não informada',service:r.service||'—',period:classification==='Periódica'?(r.period||'—'):'Não periódica',status:r.status||'',system:r.system||'',executors:r.executors||'',date:r.date,age:ageDays(r.date),month:r.month||'',
 };};
 const ALL_ORDERS=[...(D.periodic||[]).map(r=>buildOrder(r,'Periódica')),...(D.nonperiodic||[]).map(r=>buildOrder(r,'Não periódica'))];
 const ORDER_MAP=new Map(ALL_ORDERS.map(r=>[r.id,r]));
 const BACKLOG=ALL_ORDERS.filter(r=>r.status==='Pendente');
-let filters={},pointFilters={},page=0,activeView='programacao',calendarWeek='',calendarArea='',calendarSpecialty='';
+let filters={year:CURRENT_YEAR},pointFilters={},page=0,activeView='programacao',calendarWeek='',calendarArea='',calendarSpecialty='';
 const dirtyOrders=new Set();
 const PAGE_SIZE=100;
 
@@ -86,27 +87,28 @@ function firstName(id){return String(personName(id)).trim().split(/\s+/)[0]||Str
 function assignmentChips(r){return assignments(r).map(a=>`<span class="labor-chip ${a.thirdParty?'third-party':''}"><b>${esc(a.thirdParty?allocationName(a):firstName(a.id))}</b><small>${esc(allocationCode(a))}${a.thirdParty&&a.company?` · ${esc(a.company)}`:''}</small><input type="number" min="0.5" max="8" step="0.5" value="${a.hours||''}" data-assignment-hours data-person="${esc(a.id)}" data-order="${esc(r.id)}" aria-label="Horas de ${esc(allocationName(a))}"><em>h</em><button type="button" data-remove-labor="${esc(a.id)}" data-order="${esc(r.id)}" aria-label="Remover ${esc(allocationName(a))}">×</button></span>`).join('')||'<span class="no-labor">Ninguém definido</span>';}
 
 function selected(){const q=(filters.search||'').toLocaleLowerCase('pt-BR');return BACKLOG.filter(r=>{
- if(filters.classification&&r.classification!==filters.classification)return false;if(filters.area&&r.area!==filters.area)return false;if(filters.assetCode&&r.assetCode!==filters.assetCode)return false;if(filters.specialty&&r.specialty!==filters.specialty)return false;if(filters.nature&&r.nature!==filters.nature)return false;if(filters.month&&r.month!==filters.month)return false;
+ if(filters.year&&r.year!==filters.year)return false;if(filters.classification&&r.classification!==filters.classification)return false;if(filters.area&&r.area!==filters.area)return false;if(filters.assetCode&&r.assetCode!==filters.assetCode)return false;if(filters.nature&&r.nature!==filters.nature)return false;if(filters.month&&r.month!==filters.month)return false;if(filters.period&&r.period!==filters.period)return false;
  if(filters.age==='0-7'&&r.age>7)return false;if(filters.age==='8-30'&&(r.age<8||r.age>30))return false;if(filters.age==='31-60'&&(r.age<31||r.age>60))return false;if(filters.age==='61+'&&r.age<61)return false;
  if(filters.stage==='none'&&stage(r))return false;if(filters.stage&&filters.stage!=='none'&&stage(r)!==filters.stage)return false;if(filters.extra&&!flag(r,filters.extra))return false;if(filters.week==='none'&&week(r))return false;if(filters.week&&filters.week!=='none'&&week(r)!==filters.week)return false;if(filters.labor&& !assignedIds(r).includes(filters.labor))return false;
  return !q||[r.id,r.plan,r.area,r.assetCode,r.assetName,r.specialty,r.description,r.service].join(' ').toLocaleLowerCase('pt-BR').includes(q);
 });}
 function options(rows,key,current,all='Todos'){return `<option value="">${all}</option>${distinct(rows,key).map(v=>`<option value="${esc(v)}" ${current===v?'selected':''}>${esc(v)}</option>`).join('')}`;}
-function renderFilters(){const weeks=weekOptions();$('#filters').innerHTML=`
- <label>Tipo de ordem<select data-filter="classification">${options(BACKLOG,'classification',filters.classification)}</select></label>
- <label>Área<select data-filter="area">${options(BACKLOG,'area',filters.area,'Todas')}</select></label>
- <label>Bem<select data-filter="assetCode">${options(BACKLOG,'assetCode',filters.assetCode,'Todos')}</select></label>
- <label>Especialidade<select data-filter="specialty">${options(BACKLOG,'specialty',filters.specialty,'Todas')}</select></label>
- <label>Natureza<select data-filter="nature">${options(BACKLOG,'nature',filters.nature,'Todas')}</select></label>
- <label>Mês<select data-filter="month">${options(BACKLOG,'month',filters.month,'Todos')}</select></label>
+function renderFilters(){const weeks=weekOptions(),yearRows=BACKLOG.filter(r=>!filters.year||r.year===filters.year);$('#filters').innerHTML=`
+ <label>Ano<select data-filter="year">${options(BACKLOG,'year',filters.year,'Todos')}</select></label>
+ <label>Origem da ordem<select data-filter="classification">${options(yearRows,'classification',filters.classification)}</select></label>
+ <label>Mês<select data-filter="month">${options(yearRows,'month',filters.month,'Todos')}</select></label>
+ <label>Tipo de manutenção<select data-filter="nature">${options(yearRows,'nature',filters.nature,'Todos')}</select></label>
+ <label>Área<select data-filter="area">${options(yearRows,'area',filters.area,'Todas')}</select></label>
+ <label>Periodicidade<select data-filter="period">${options(yearRows,'period',filters.period,'Todas')}</select></label>
+ <label>Bem<select data-filter="assetCode">${options(yearRows,'assetCode',filters.assetCode,'Todos')}</select></label>
  <label>Idade<select data-filter="age"><option value="">Todas</option><option value="0-7" ${filters.age==='0-7'?'selected':''}>Até 7 dias</option><option value="8-30" ${filters.age==='8-30'?'selected':''}>8 a 30 dias</option><option value="31-60" ${filters.age==='31-60'?'selected':''}>31 a 60 dias</option><option value="61+" ${filters.age==='61+'?'selected':''}>Acima de 60 dias</option></select></label>
  <label>Etapa<select data-filter="stage"><option value="">Todas</option><option value="none" ${filters.stage==='none'?'selected':''}>Sem etapa</option>${CORE.map(c=>`<option value="${c}" ${filters.stage===c?'selected':''}>${c} · ${CORE_LABEL[c]}</option>`).join('')}</select></label>
  <label>Flag complementar<select data-filter="extra"><option value="">Todas</option>${['SC','GP','05RS','AG-CAD'].map(code=>`<option value="${code}" ${filters.extra===code?'selected':''}>${code} · ${FLAG_LABEL[code]}</option>`).join('')}</select></label>
  <label>Semana / ano<select data-filter="week"><option value="">Todas</option><option value="none" ${filters.week==='none'?'selected':''}>Sem programação</option>${weeks.map(w=>`<option value="${w.value}" ${filters.week===w.value?'selected':''}>${w.label}</option>`).join('')}</select></label>
  <label>Mão de obra<select data-filter="labor"><option value="">Todos</option>${PEOPLE.map(p=>`<option value="${esc(p.id)}" ${filters.labor===String(p.id)?'selected':''}>${esc(p.name)} · ${esc(p.area)}</option>`).join('')}</select></label>
  <label class="search">Buscar ordem, plano, bem ou descrição<input data-filter="search" value="${esc(filters.search||'')}" placeholder="Digite para buscar"></label><button id="clear">Limpar filtros</button>`;
- $('#filters').onchange=e=>{if(!e.target.dataset.filter)return;filters[e.target.dataset.filter]=e.target.value;page=0;render();};
- const search=$('[data-filter="search"]');search.oninput=e=>{filters.search=e.target.value;page=0;render(false);};$('#clear').onclick=()=>{filters={};page=0;render();};
+ $('#filters').onchange=e=>{if(!e.target.dataset.filter)return;const key=e.target.dataset.filter;if(key==='year')filters={year:e.target.value};else filters[key]=e.target.value;page=0;render();};
+ const search=$('[data-filter="search"]');search.oninput=e=>{filters.search=e.target.value;page=0;render(false);};$('#clear').onclick=()=>{filters={year:CURRENT_YEAR};page=0;render();};
 }
 function stageButtons(r){const current=stage(r),index=CORE.indexOf(current),next=CORE[index+1];return `<div class="stage-control"><div class="stage-buttons">${CORE.map((code,i)=>`<button type="button" class="stage-button ${i<=index?'done':''} ${i===index+1?'next':''} ${i>index+1?'locked':''}" data-stage="${code}" data-order="${r.id}" title="${CORE_LABEL[code]}" aria-label="${code} · ${CORE_LABEL[code]}">${code}</button>`).join('')}</div><span class="stage-current">Atual: <strong>${current||'sem etapa'}</strong>${next?` · Próxima: <strong>${next}</strong>`:' · Fluxo concluído'}</span></div>`;}
 function rowHtml(r){const canSchedule=CORE.indexOf(stage(r))>=2,programmed=stage(r)==='04SC',programAction=ACCESS.canProgram()?`<button type="button" class="program-order" data-program data-order="${r.id}" ${canSchedule&&(!programmed||dirtyOrders.has(r.id))?'':'disabled'}>${programmed?(dirtyOrders.has(r.id)?'Salvar programação':'Ordem programada'):'Concluir e salvar programação'}</button>`:'<span class="no-program-access">Programação restrita</span>';return `<tr class="${dirtyOrders.has(r.id)?'unsaved':''}"><td>${stageButtons(r)}<div class="stage-save">${programAction}</div></td><td><button type="button" title="SC · ${FLAG_LABEL.SC}" aria-label="SC · ${FLAG_LABEL.SC}" class="flag-toggle ${flag(r,'SC')?'active':''}" data-extra="SC" data-order="${r.id}">SC</button> <button type="button" title="GP · ${FLAG_LABEL.GP}" aria-label="GP · ${FLAG_LABEL.GP}" class="flag-toggle ${flag(r,'GP')?'active':''}" data-extra="GP" data-order="${r.id}">GP</button> <button type="button" title="05RS · ${FLAG_LABEL['05RS']}" aria-label="05RS · ${FLAG_LABEL['05RS']}" class="flag-toggle reprogram ${flag(r,'05RS')?'active':''}" data-extra="05RS" data-order="${r.id}">05RS</button> <button type="button" title="AG-CAD · ${FLAG_LABEL['AG-CAD']}" aria-label="AG-CAD · ${FLAG_LABEL['AG-CAD']}" class="flag-toggle waiting ${flag(r,'AG-CAD')?'active':''}" data-extra="AG-CAD" data-order="${r.id}">AG-CAD</button>${r.classification==='Periódica'?`<span class="fixed-badge" title="PREV · ${FLAG_LABEL.PREV}">PREV</span>`:''}</td>
@@ -135,7 +137,7 @@ function renderPointing(){const all=pointRows(),rows=filteredPointRows().sort((a
  const groups=new Map();for(const x of rows){const key=[x.week,x.day,x.personId].join('|'),g=groups.get(key)||{...x,hours:0};g.hours+=x.hours;groups.set(key,g);}$('#capacity-board').innerHTML=[...groups.values()].sort((a,b)=>`${a.week}|${a.day}|${a.person.name}`.localeCompare(`${b.week}|${b.day}|${b.person.name}`,'pt-BR')).map(g=>`<div class="capacity-card"><div><strong>${esc(g.person.name)}</strong><span>${weekLabel(g.week)} · ${esc(g.day||'—')}</span></div><b class="${g.hours>8?'overload':''}">${g.hours.toLocaleString('pt-BR')} / 8 h</b><div class="capacity-track"><i style="width:${Math.min(100,g.hours/8*100)}%"></i></div></div>`).join('')||'<div class="empty">A capacidade aparecerá quando houver programação com mão de obra.</div>';
 }
 function renderFlowLegend(){const items=[...CORE.map(code=>[code,CORE_LABEL[code]]),...Object.entries(FLAG_LABEL)];$('#flow-tag-legend').innerHTML=items.map(([code,label])=>`<article title="${esc(code)} · ${esc(label)}"><strong>${esc(code)}</strong><span>${esc(label)}</span></article>`).join('');}
-function setView(view){activeView=view;document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===view));$('#programacao-view').hidden=view!=='programacao';$('#calendario-view').hidden=view!=='calendario';$('#apontamentos-view').hidden=view!=='apontamentos';$('#fluxo-view').hidden=view!=='fluxo';if(view==='apontamentos'){renderPointing();$('#count').textContent=nf(pointRows().length)+' alocações';}else if(view==='fluxo'){renderFlowLegend();$('#count').textContent='Consulta do processo';}else if(view==='calendario'){renderCalendar();$('#count').textContent='Programação semanal completa';}else{filters={};page=0;render(true);}}
+function setView(view){activeView=view;document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===view));$('#programacao-view').hidden=view!=='programacao';$('#calendario-view').hidden=view!=='calendario';$('#apontamentos-view').hidden=view!=='apontamentos';$('#fluxo-view').hidden=view!=='fluxo';if(view==='apontamentos'){renderPointing();$('#count').textContent=nf(pointRows().length)+' alocações';}else if(view==='fluxo'){renderFlowLegend();$('#count').textContent='Consulta do processo';}else if(view==='calendario'){renderCalendar();$('#count').textContent='Programação semanal completa';}else{filters={year:CURRENT_YEAR};page=0;render(true);}}
 
 let thirdPartyOrder='';
 function openThirdPartyDialog(r){
