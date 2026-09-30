@@ -15,6 +15,12 @@ function permissionExport(){return allPeople().map(p=>{const id=String(p.id),rol
 
 document.addEventListener('DOMContentLoaded',()=>{
  $('#admin-user').textContent=`${ACCESS.currentName()} · ${ACCESS.currentId()||'matrícula não identificada'}`;
+ const resetPanel=$('#reset-programming'),resetInput=$('#reset-confirmation'),resetButton=$('#reset-programming-button');
+ if(ACCESS.canResetPlanning()){
+  resetPanel.hidden=false;
+  resetInput.oninput=()=>{resetButton.disabled=resetInput.value.trim().toLocaleUpperCase('pt-BR')!=='LIMPAR';};
+  resetButton.onclick=()=>{if(resetInput.value.trim().toLocaleUpperCase('pt-BR')!=='LIMPAR')return;if(!confirm('Confirma a limpeza de toda a programação salva neste navegador?'))return;let removed=0;for(const key of Object.keys(localStorage)){if(key.startsWith('simec-backlog-')){localStorage.removeItem(key);removed++;}}localStorage.setItem('simec_programacao_ultimo_reset_v1',JSON.stringify({por:ACCESS.currentName(),matricula:ACCESS.currentId(),em:new Date().toISOString(),itensRemovidos:removed}));resetInput.value='';resetButton.disabled=true;$('#reset-result').textContent=`Programação resetada por ${ACCESS.currentName()}. ${removed} registro(s) locais removidos.`;toast('Programação limpa. Abra o Backlog para iniciar uma nova programação.');};
+ }
  if(!ACCESS.isAdmin()){$('#admin-content').hidden=true;$('#admin-blocked').hidden=false;return;}
  $('#admin-content').hidden=false;
  $('#employee-form').onsubmit=e=>{e.preventDefault();try{const person={id:$('#employee-id').value.trim(),name:$('#employee-name').value.trim(),area:$('#employee-area').value.trim(),type:$('#employee-type').value,supervisor:$('#employee-supervisor').value.trim()};window.SIMEC_EMPLOYEES.save(person);render();$('#employee-result').textContent='Cadastro salvo neste navegador. Exporte o CSV para publicar pelo CMD.';toast('Cadastro salvo neste navegador.');}catch(error){$('#employee-result').textContent=error.message;}};

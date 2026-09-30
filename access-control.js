@@ -1,6 +1,7 @@
 (() => {
   'use strict';
   const ROOT_ADMINS = Object.freeze(['1863', '1502', '1822', '2013']);
+  const PROGRAM_RESET_ADMINS = Object.freeze(['1863', '2013', '1822', '1855']);
   const ROLE_KEY = 'simec_portal_roles_v1';
   const NAME_KEY = 'simec_portal_nome_v1';
   const ID_KEY = 'simec_portal_usuario_v1';
@@ -40,10 +41,12 @@
 
   window.SIMEC_ACCESS = Object.freeze({
     ROOT_ADMINS,
+    PROGRAM_RESET_ADMINS,
     currentId,
     currentName: () => sessionStorage.getItem(NAME_KEY) || 'Funcionário',
     roleFor,
     isAdmin: () => roleFor() === 'admin',
+    canResetPlanning: () => PROGRAM_RESET_ADMINS.includes(currentId()),
     canProgram: () => ['admin', 'programador'].includes(roleFor()),
     readRoles,
     saveRoles
