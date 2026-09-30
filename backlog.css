@@ -52,3 +52,6 @@
 .stage-save{margin-top:8px}.stage-save .program-order{max-width:210px;white-space:normal;min-height:38px;background:#167242;color:white;border:0;border-radius:6px;padding:7px 10px;cursor:pointer}.stage-save .program-order:disabled{opacity:.45;cursor:not-allowed}
 
 #admin-tab[hidden],#admin-content[hidden],#admin-blocked[hidden]{display:none!important}
+
+/* destaque-ordem-atividade */
+.backlog-table th.order-focus,.backlog-table td.order-focus{position:sticky;left:0;z-index:3;min-width:280px;max-width:360px;white-space:normal;box-shadow:3px 0 8px #2d17321a}.backlog-table th.order-focus{z-index:4}.backlog-table td.order-focus{background:#fff8ec;border-left:5px solid #e5651a}.backlog-table td.order-focus strong{display:block;color:#5b1d83;font-size:16px}.backlog-table td.order-focus span{display:block;color:#283b4d;font-weight:700;margin:4px 0}.backlog-table td.order-focus small{display:block;color:#6e6275}.backlog-table tbody tr:hover td.order-focus{background:#ffefd9}
