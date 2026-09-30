@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const ROOT_ADMINS = Object.freeze(['1863', '1502', '1822', '2013']);
+const ROOT_ADMINS = Object.freeze(['1863', '1502', '1822', '2013', '1584', '1591']);
   const PROGRAM_RESET_ADMINS = Object.freeze(['1863', '2013', '1822', '1855']);
   const ROLE_KEY = 'simec_portal_roles_v1';
   const NAME_KEY = 'simec_portal_nome_v1';
