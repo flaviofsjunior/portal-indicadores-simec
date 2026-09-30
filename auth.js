@@ -34,6 +34,7 @@
       .simec-welcome{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
       .simec-logout{border:0;border-radius:6px;padding:7px 11px;background:#151e75;color:#fff;font:600 13px "Segoe UI",Arial,sans-serif;cursor:pointer;white-space:nowrap}
       .simec-logout:hover{background:#252f94}
+      @media print{.simec-session,.simec-login{display:none!important}}
       @media(max-width:520px){.simec-login-card{padding:27px 22px}.simec-login h1{font-size:24px}}
     `;
     document.head.appendChild(style);
