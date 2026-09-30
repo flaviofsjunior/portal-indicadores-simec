@@ -2967,17 +2967,17 @@
 284927;PERIÓDICA;FEA - Elétrica;FEA;2026-09-01;Executada;AC2-FEA-INS-AT01;SETEMBRO
 284928;PERIÓDICA;FEA - Elétrica;FEA;2026-09-08;Executada;AC2-FEA-INS-AT01;SETEMBRO
 284929;PERIÓDICA;FEA - Elétrica;FEA;2026-09-15;Executada;AC2-FEA-INS-AT01;SETEMBRO
-284930;PERIÓDICA;FEA - Elétrica;FEA;2026-09-22;Pendente;AC2-FEA-INS-AT01;SETEMBRO
-284931;PERIÓDICA;FEA - Elétrica;FEA;2026-09-29;Pendente;AC2-FEA-INS-AT01;SETEMBRO
+284930;PERIÓDICA;FEA - Elétrica;FEA;2026-09-22;Executada;AC2-FEA-INS-AT01;SETEMBRO
+284931;PERIÓDICA;FEA - Elétrica;FEA;2026-09-29;Executada;AC2-FEA-INS-AT01;SETEMBRO
 284932;PERIÓDICA;FEA - Elétrica;FEA;2026-09-02;Executada;AC2-FEA-INS-AT01;SETEMBRO
 284933;PERIÓDICA;FEA - Elétrica;FEA;2026-09-09;Executada;AC2-FEA-INS-AT01;SETEMBRO
 284934;PERIÓDICA;FEA - Elétrica;FEA;2026-09-16;Executada;AC2-FEA-INS-AT01;SETEMBRO
-284935;PERIÓDICA;FEA - Elétrica;FEA;2026-09-23;Pendente;AC2-FEA-INS-AT01;SETEMBRO
-284936;PERIÓDICA;FEA - Elétrica;FEA;2026-09-30;Pendente;AC2-FEA-INS-AT01;SETEMBRO
+284935;PERIÓDICA;FEA - Elétrica;FEA;2026-09-23;Executada;AC2-FEA-INS-AT01;SETEMBRO
+284936;PERIÓDICA;FEA - Elétrica;FEA;2026-09-30;Executada;AC2-FEA-INS-AT01;SETEMBRO
 284937;PERIÓDICA;FEA - Elétrica;FEA;2026-09-03;Executada;AC2-FEA-INS-BR04;SETEMBRO
 284938;PERIÓDICA;FEA - Elétrica;FEA;2026-09-10;Executada;AC2-FEA-INS-BR04;SETEMBRO
 284939;PERIÓDICA;FEA - Elétrica;FEA;2026-09-17;Executada;AC2-FEA-INS-BR04;SETEMBRO
-284940;PERIÓDICA;FEA - Elétrica;FEA;2026-09-24;Pendente;AC2-FEA-INS-BR04;SETEMBRO
+284940;PERIÓDICA;FEA - Elétrica;FEA;2026-09-24;Executada;AC2-FEA-INS-BR04;SETEMBRO
 284941;PERIÓDICA;FEA - Elétrica;FEA;2026-09-10;Executada;AC2-FEA-INS-BR04;SETEMBRO
 284942;PERIÓDICA;FEA - Elétrica;FEA;2026-09-03;Executada;AC2-FEA-INS-BR04;SETEMBRO
 284943;PERIÓDICA;FEA - Elétrica;FEA;2026-09-10;Executada;AC2-FEA-INS-BR04;SETEMBRO
@@ -2990,23 +2990,23 @@
 284950;PERIÓDICA;FEA - Elétrica;FEA;2026-09-04;Executada;AC2-FEA-INS-BR06;SETEMBRO
 284951;PERIÓDICA;FEA - Elétrica;FEA;2026-09-04;Executada;AC2-FEA-INS-BR06;SETEMBRO
 284952;PERIÓDICA;FEA - Elétrica;FEA;2026-09-16;Executada;AC2-FEA-INS-CA07;SETEMBRO
-284953;PERIÓDICA;FEA - Hidráulica;FEA;2026-09-03;Pendente;AC2-FEA-INS-CI01;SETEMBRO
-284954;PERIÓDICA;FEA - Hidráulica;FEA;2026-09-01;Pendente;AC2-FEA-INS-CI01;SETEMBRO
-284955;PERIÓDICA;FEA - Hidráulica;FEA;2026-09-17;Pendente;AC2-FEA-INS-CI01;SETEMBRO
-284956;PERIÓDICA;FEA - Hidráulica;FEA;2026-09-04;Pendente;AC2-FEA-INS-CI01;SETEMBRO
-284957;PERIÓDICA;FEA - Hidráulica;FEA;2026-09-05;Pendente;AC2-FEA-INS-CI02;SETEMBRO
-284958;PERIÓDICA;FEA - Hidráulica;FEA;2026-09-24;Pendente;AC2-FEA-INS-CI03;SETEMBRO
-284959;PERIÓDICA;FEA - Hidráulica;FEA;2026-09-08;Pendente;AC2-FEA-INS-CI03;SETEMBRO
-284960;PERIÓDICA;FEA - Hidráulica;FEA;2026-09-29;Pendente;AC2-FEA-INS-CI03;SETEMBRO
+284953;PERIÓDICA;FEA - Hidráulica;FEA;2026-09-03;Executada;AC2-FEA-INS-CI01;SETEMBRO
+284954;PERIÓDICA;FEA - Hidráulica;FEA;2026-09-01;Executada;AC2-FEA-INS-CI01;SETEMBRO
+284955;PERIÓDICA;FEA - Hidráulica;FEA;2026-09-17;Executada;AC2-FEA-INS-CI01;SETEMBRO
+284956;PERIÓDICA;FEA - Hidráulica;FEA;2026-09-04;Executada;AC2-FEA-INS-CI01;SETEMBRO
+284957;PERIÓDICA;FEA - Hidráulica;FEA;2026-09-05;Executada;AC2-FEA-INS-CI02;SETEMBRO
+284958;PERIÓDICA;FEA - Hidráulica;FEA;2026-09-24;Executada;AC2-FEA-INS-CI03;SETEMBRO
+284959;PERIÓDICA;FEA - Hidráulica;FEA;2026-09-08;Executada;AC2-FEA-INS-CI03;SETEMBRO
+284960;PERIÓDICA;FEA - Hidráulica;FEA;2026-09-29;Executada;AC2-FEA-INS-CI03;SETEMBRO
 284961;PERIÓDICA;FEA - Elétrica;FEA;2026-09-01;Executada;AC2-FEA-INS-IG10;SETEMBRO
-284962;PERIÓDICA;FEA - Elétrica;FEA;2026-09-01;Pendente;AC2-FEA-INS-MT11;SETEMBRO
-284963;PERIÓDICA;FEA - Elétrica;FEA;2026-09-01;Pendente;AC2-FEA-INS-PA03;SETEMBRO
+284962;PERIÓDICA;FEA - Elétrica;FEA;2026-09-01;Executada;AC2-FEA-INS-MT11;SETEMBRO
+284963;PERIÓDICA;FEA - Elétrica;FEA;2026-09-01;Executada;AC2-FEA-INS-PA03;SETEMBRO
 284964;PERIÓDICA;FEA - Elétrica;FEA;2026-09-01;Executada;AC2-FEA-INS-PO15;SETEMBRO
-284965;PERIÓDICA;FEA - Elétrica;FEA;2026-09-01;Pendente;AC2-FEA-INS-RE12;SETEMBRO
+284965;PERIÓDICA;FEA - Elétrica;FEA;2026-09-01;Executada;AC2-FEA-INS-RE12;SETEMBRO
 284966;PERIÓDICA;FEA - Elétrica;FEA;2026-09-01;Executada;AC2-FEA-INS-SE13;SETEMBRO
-284967;PERIÓDICA;FEA - Elétrica;FEA;2026-09-01;Pendente;AC2-FEA-INS-SH14;SETEMBRO
-284968;PERIÓDICA;FEA - Hidráulica;FEA;2026-09-15;Pendente;AC2-FEA-INS-SHI1;SETEMBRO
-284969;PERIÓDICA;FEA - Elétrica;FEA;2026-09-01;Pendente;AC2-FEA-INS-SO16;SETEMBRO
+284967;PERIÓDICA;FEA - Elétrica;FEA;2026-09-01;Executada;AC2-FEA-INS-SH14;SETEMBRO
+284968;PERIÓDICA;FEA - Hidráulica;FEA;2026-09-15;Executada;AC2-FEA-INS-SHI1;SETEMBRO
+284969;PERIÓDICA;FEA - Elétrica;FEA;2026-09-01;Executada;AC2-FEA-INS-SO16;SETEMBRO
 284970;PERIÓDICA;FEA - Hidráulica;FEA;2026-09-24;Executada;AC2-FEA-LUB-AB01;SETEMBRO
 284971;PERIÓDICA;FEA - Hidráulica;FEA;2026-09-04;Executada;AC2-FEA-LUB-CA12;SETEMBRO
 284972;PERIÓDICA;FEA - Hidráulica;FEA;2026-09-05;Executada;AC2-FEA-LUB-CE11;SETEMBRO
@@ -3035,8 +3035,8 @@
 284995;PERIÓDICA;FEA - Hidráulica;FEA;2026-09-17;Executada;AC2-FEA-LUB-PO15;SETEMBRO
 284996;PERIÓDICA;FEA - Hidráulica;FEA;2026-09-24;Executada;AC2-FEA-LUB-PO15;SETEMBRO
 284997;PERIÓDICA;FEA - Hidráulica;FEA;2026-09-18;Executada;AC2-FEA-LUB-PR09;SETEMBRO
-284998;PERIÓDICA;Forno Panela - Elétrica;Não informado;2026-09-01;Pendente;AC2-FP-INS-CAP01;SETEMBRO
-284999;PERIÓDICA;Forno Panela - Elétrica;Não informado;2026-09-17;Pendente;AC2-FP-INS-CAP01;SETEMBRO
+284998;PERIÓDICA;Forno Panela - Elétrica;Não informado;2026-09-01;Executada;AC2-FP-INS-CAP01;SETEMBRO
+284999;PERIÓDICA;Forno Panela - Elétrica;Não informado;2026-09-17;Executada;AC2-FP-INS-CAP01;SETEMBRO
 285000;PERIÓDICA;Lingotamento Contínuo - Elétrica;Lingotamento Contínuo;2026-09-01;Executada;AC-LC-PNL-ELE-C2;SETEMBRO
 285001;PERIÓDICA;Lingotamento Contínuo - Elétrica;Lingotamento Contínuo;2026-09-26;Pendente;AC2-LC-IN-CDT-02;SETEMBRO
 285002;PERIÓDICA;Lingotamento Contínuo - Elétrica;Lingotamento Contínuo;2026-09-26;Pendente;AC2-LC-IN-CDT-03;SETEMBRO
@@ -3072,46 +3072,46 @@
 285032;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-02;Executada;AC2-LC-INH-CDT02;SETEMBRO
 285033;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-09;Executada;AC2-LC-INH-CDT02;SETEMBRO
 285034;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-16;Executada;AC2-LC-INH-CDT02;SETEMBRO
-285035;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-23;Pendente;AC2-LC-INH-CDT02;SETEMBRO
-285036;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-30;Pendente;AC2-LC-INH-CDT02;SETEMBRO
+285035;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-23;Executada;AC2-LC-INH-CDT02;SETEMBRO
+285036;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-30;Executada;AC2-LC-INH-CDT02;SETEMBRO
 285037;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-03;Executada;AC2-LC-INH-CDT03;SETEMBRO
 285038;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-10;Executada;AC2-LC-INH-CDT03;SETEMBRO
 285039;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-17;Executada;AC2-LC-INH-CDT03;SETEMBRO
-285040;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-24;Pendente;AC2-LC-INH-CDT03;SETEMBRO
+285040;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-24;Executada;AC2-LC-INH-CDT03;SETEMBRO
 285041;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-03;Executada;AC2-LC-INH-CTR09;SETEMBRO
 285042;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-10;Executada;AC2-LC-INH-CTR09;SETEMBRO
 285043;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-17;Executada;AC2-LC-INH-CTR09;SETEMBRO
-285044;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-24;Pendente;AC2-LC-INH-CTR09;SETEMBRO
+285044;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-24;Executada;AC2-LC-INH-CTR09;SETEMBRO
 285045;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-03;Executada;AC2-LC-INH-LRE10;SETEMBRO
 285046;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-10;Executada;AC2-LC-INH-LRE10;SETEMBRO
 285047;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-17;Executada;AC2-LC-INH-LRE10;SETEMBRO
-285048;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-24;Pendente;AC2-LC-INH-LRE10;SETEMBRO
+285048;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-24;Executada;AC2-LC-INH-LRE10;SETEMBRO
 285049;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-03;Executada;AC2-LC-INH-MTT08;SETEMBRO
 285050;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-10;Executada;AC2-LC-INH-MTT08;SETEMBRO
 285051;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-17;Executada;AC2-LC-INH-MTT08;SETEMBRO
-285052;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-24;Pendente;AC2-LC-INH-MTT08;SETEMBRO
+285052;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-24;Executada;AC2-LC-INH-MTT08;SETEMBRO
 285053;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-03;Executada;AC2-LC-INH-SED07;SETEMBRO
 285054;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-10;Executada;AC2-LC-INH-SED07;SETEMBRO
 285055;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-17;Executada;AC2-LC-INH-SED07;SETEMBRO
-285056;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-24;Pendente;AC2-LC-INH-SED07;SETEMBRO
+285056;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-24;Executada;AC2-LC-INH-SED07;SETEMBRO
 285057;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-03;Executada;AC2-LC-INH-SHI11;SETEMBRO
 285058;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-10;Executada;AC2-LC-INH-SHI11;SETEMBRO
 285059;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-17;Executada;AC2-LC-INH-SHI11;SETEMBRO
-285060;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-24;Pendente;AC2-LC-INH-SHI11;SETEMBRO
+285060;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-24;Executada;AC2-LC-INH-SHI11;SETEMBRO
 285061;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-03;Executada;AC2-LC-INH-SIO04;SETEMBRO
 285062;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-10;Executada;AC2-LC-INH-SIO04;SETEMBRO
 285063;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-17;Executada;AC2-LC-INH-SIO04;SETEMBRO
-285064;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-24;Pendente;AC2-LC-INH-SIO04;SETEMBRO
+285064;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-24;Executada;AC2-LC-INH-SIO04;SETEMBRO
 285065;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-02;Executada;AC2-LC-INH-SIO05;SETEMBRO
 285066;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-03;Executada;AC2-LC-INH-TOG00;SETEMBRO
 285067;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-10;Executada;AC2-LC-INH-TOG00;SETEMBRO
 285068;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-17;Executada;AC2-LC-INH-TOG00;SETEMBRO
 285069;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-24;Executada;AC2-LC-INH-TOG00;SETEMBRO
-285070;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-28;Pendente;AC2-LC-INH-TOG01;SETEMBRO
+285070;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-28;Executada;AC2-LC-INH-TOG01;SETEMBRO
 285071;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-04;Executada;AC2-LC-INH-ULM06;SETEMBRO
 285072;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-11;Executada;AC2-LC-INH-ULM06;SETEMBRO
 285073;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-18;Executada;AC2-LC-INH-ULM06;SETEMBRO
-285074;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-25;Pendente;AC2-LC-INH-ULM06;SETEMBRO
+285074;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-25;Executada;AC2-LC-INH-ULM06;SETEMBRO
 285075;PERIÓDICA;Lingotamento Contínuo - Mecânica;Lingotamento Contínuo;2026-09-02;Executada;AC2-LC-INS-CDT33;SETEMBRO
 285076;PERIÓDICA;Lingotamento Contínuo - Mecânica;Lingotamento Contínuo;2026-09-18;Pendente;AC2-LC-INS-CDT33;SETEMBRO
 285077;PERIÓDICA;Lingotamento Contínuo - Mecânica;Lingotamento Contínuo;2026-09-02;Executada;AC2-LC-INS-CDT34;SETEMBRO
@@ -3223,24 +3223,24 @@
 285183;PERIÓDICA;Lingotamento Contínuo - Elétrica;Lingotamento Contínuo;2026-09-05;Pendente;AC2-RE-IN-AQV-37;SETEMBRO
 285184;PERIÓDICA;Lingotamento Contínuo - Elétrica;Lingotamento Contínuo;2026-09-26;Pendente;AC2-RE-IN-UHI-47;SETEMBRO
 285185;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-09;Executada;AC2-RE-INH-AQD02;SETEMBRO
-285186;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-25;Pendente;AC2-RE-INH-AQD02;SETEMBRO
+285186;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-25;Executada;AC2-RE-INH-AQD02;SETEMBRO
 285187;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-03;Executada;AC2-RE-INH-AQH01;SETEMBRO
 285188;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-19;Executada;AC2-RE-INH-AQH01;SETEMBRO
 285189;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-03;Executada;AC2-RE-INH-AQV00;SETEMBRO
 285190;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-19;Executada;AC2-RE-INH-AQV00;SETEMBRO
 285191;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-09;Executada;AC2-RE-INH-UHI03;SETEMBRO
-285192;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-25;Pendente;AC2-RE-INH-UHI03;SETEMBRO
+285192;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-25;Executada;AC2-RE-INH-UHI03;SETEMBRO
 285193;PERIÓDICA;Lingotamento Contínuo - Mecânica;Lingotamento Contínuo;2026-09-01;Executada;AC2-RE-INS-AQD64;SETEMBRO
 285194;PERIÓDICA;Lingotamento Contínuo - Mecânica;Lingotamento Contínuo;2026-09-17;Executada;AC2-RE-INS-AQD64;SETEMBRO
-285195;PERIÓDICA;Lingotamento Contínuo - Mecânica;Lingotamento Contínuo;2026-09-01;Pendente;AC2-RE-INS-AQH63;SETEMBRO
-285196;PERIÓDICA;Lingotamento Contínuo - Mecânica;Lingotamento Contínuo;2026-09-17;Pendente;AC2-RE-INS-AQH63;SETEMBRO
-285197;PERIÓDICA;Lingotamento Contínuo - Mecânica;Lingotamento Contínuo;2026-09-01;Pendente;AC2-RE-INS-AQV62;SETEMBRO
-285198;PERIÓDICA;Lingotamento Contínuo - Mecânica;Lingotamento Contínuo;2026-09-17;Pendente;AC2-RE-INS-AQV62;SETEMBRO
-285199;PERIÓDICA;Lingotamento Contínuo - Mecânica;Lingotamento Contínuo;2026-09-01;Pendente;AC2-RE-INS-CAR65;SETEMBRO
-285200;PERIÓDICA;Lingotamento Contínuo - Mecânica;Lingotamento Contínuo;2026-09-17;Pendente;AC2-RE-INS-CAR65;SETEMBRO
+285195;PERIÓDICA;Lingotamento Contínuo - Mecânica;Lingotamento Contínuo;2026-09-01;Executada;AC2-RE-INS-AQH63;SETEMBRO
+285196;PERIÓDICA;Lingotamento Contínuo - Mecânica;Lingotamento Contínuo;2026-09-17;Executada;AC2-RE-INS-AQH63;SETEMBRO
+285197;PERIÓDICA;Lingotamento Contínuo - Mecânica;Lingotamento Contínuo;2026-09-01;Executada;AC2-RE-INS-AQV62;SETEMBRO
+285198;PERIÓDICA;Lingotamento Contínuo - Mecânica;Lingotamento Contínuo;2026-09-17;Executada;AC2-RE-INS-AQV62;SETEMBRO
+285199;PERIÓDICA;Lingotamento Contínuo - Mecânica;Lingotamento Contínuo;2026-09-01;Executada;AC2-RE-INS-CAR65;SETEMBRO
+285200;PERIÓDICA;Lingotamento Contínuo - Mecânica;Lingotamento Contínuo;2026-09-17;Executada;AC2-RE-INS-CAR65;SETEMBRO
 285201;PERIÓDICA;Lingotamento Contínuo - Mecânica;Lingotamento Contínuo;2026-09-09;Pendente;AC2-RE-INS-PRP67;SETEMBRO
 285202;PERIÓDICA;Lingotamento Contínuo - Mecânica;Lingotamento Contínuo;2026-09-25;Pendente;AC2-RE-INS-PRP67;SETEMBRO
-285203;PERIÓDICA;Lingotamento Contínuo - Mecânica;Lingotamento Contínuo;2026-09-05;Pendente;AC2-RE-INS-VID69;SETEMBRO
+285203;PERIÓDICA;Lingotamento Contínuo - Mecânica;Lingotamento Contínuo;2026-09-05;Executada;AC2-RE-INS-VID69;SETEMBRO
 285204;PERIÓDICA;Lingotamento Contínuo - Lubrificação;Lingotamento Contínuo;2026-09-10;Executada;AC2-RE-LUB-AQD27;SETEMBRO
 285205;PERIÓDICA;Lingotamento Contínuo - Lubrificação;Lingotamento Contínuo;2026-09-10;Executada;AC2-RE-LUB-AQH26;SETEMBRO
 285206;PERIÓDICA;Lingotamento Contínuo - Lubrificação;Lingotamento Contínuo;2026-09-10;Executada;AC2-RE-LUB-AQV25;SETEMBRO
@@ -3258,31 +3258,31 @@
 285218;PERIÓDICA;Refrigeração;Refrigeração;2026-09-11;Executada;AC2-P22-RFG-AR3;SETEMBRO
 285219;PERIÓDICA;Refrigeração;Refrigeração;2026-09-11;Executada;AC2-P22-RFG-AR4;SETEMBRO
 285220;PERIÓDICA;Refrigeração;Refrigeração;2026-09-09;Executada;AC2-P23-RFG-AR5;SETEMBRO
-285221;PERIÓDICA;Refrigeração;Refrigeração;2026-09-25;Pendente;AC2-P23-RFG-AR5;SETEMBRO
+285221;PERIÓDICA;Refrigeração;Refrigeração;2026-09-25;Executada;AC2-P23-RFG-AR5;SETEMBRO
 285222;PERIÓDICA;Refrigeração;Refrigeração;2026-09-09;Executada;AC2-P23-RFG-AR6;SETEMBRO
-285223;PERIÓDICA;Refrigeração;Refrigeração;2026-09-25;Pendente;AC2-P23-RFG-AR6;SETEMBRO
+285223;PERIÓDICA;Refrigeração;Refrigeração;2026-09-25;Executada;AC2-P23-RFG-AR6;SETEMBRO
 285224;PERIÓDICA;Refrigeração;Refrigeração;2026-09-09;Executada;AC2-P23-RFG-AR7;SETEMBRO
-285225;PERIÓDICA;Refrigeração;Refrigeração;2026-09-25;Pendente;AC2-P23-RFG-AR7;SETEMBRO
+285225;PERIÓDICA;Refrigeração;Refrigeração;2026-09-25;Executada;AC2-P23-RFG-AR7;SETEMBRO
 285226;PERIÓDICA;Refrigeração;Refrigeração;2026-09-03;Executada;AC2-P24-RF-AR10;SETEMBRO
 285227;PERIÓDICA;Refrigeração;Refrigeração;2026-09-19;Pendente;AC2-P24-RF-AR10;SETEMBRO
-285228;PERIÓDICA;Refrigeração;Refrigeração;2026-09-03;Pendente;AC2-P24-RFG-AR8;SETEMBRO
+285228;PERIÓDICA;Refrigeração;Refrigeração;2026-09-03;Executada;AC2-P24-RFG-AR8;SETEMBRO
 285229;PERIÓDICA;Refrigeração;Refrigeração;2026-09-19;Pendente;AC2-P24-RFG-AR8;SETEMBRO
-285230;PERIÓDICA;Refrigeração;Refrigeração;2026-09-03;Pendente;AC2-P24-RFG-AR9;SETEMBRO
+285230;PERIÓDICA;Refrigeração;Refrigeração;2026-09-03;Executada;AC2-P24-RFG-AR9;SETEMBRO
 285231;PERIÓDICA;Refrigeração;Refrigeração;2026-09-19;Pendente;AC2-P24-RFG-AR9;SETEMBRO
 285232;PERIÓDICA;Refrigeração;Refrigeração;2026-09-05;Executada;AC2-P25-RF-AR11;SETEMBRO
-285233;PERIÓDICA;Refrigeração;Refrigeração;2026-09-21;Pendente;AC2-P25-RF-AR11;SETEMBRO
+285233;PERIÓDICA;Refrigeração;Refrigeração;2026-09-21;Não Executada;AC2-P25-RF-AR11;SETEMBRO
 285234;PERIÓDICA;Refrigeração;Refrigeração;2026-09-05;Executada;AC2-P25-RF-AR12;SETEMBRO
-285235;PERIÓDICA;Refrigeração;Refrigeração;2026-09-21;Pendente;AC2-P25-RF-AR12;SETEMBRO
-285236;PERIÓDICA;Refrigeração;Refrigeração;2026-09-11;Pendente;AC2-P26-RF-AR13;SETEMBRO
-285237;PERIÓDICA;Refrigeração;Refrigeração;2026-09-27;Pendente;AC2-P26-RF-AR13;SETEMBRO
-285238;PERIÓDICA;Refrigeração;Refrigeração;2026-09-11;Pendente;AC2-P26-RF-AR14;SETEMBRO
-285239;PERIÓDICA;Refrigeração;Refrigeração;2026-09-27;Pendente;AC2-P26-RF-AR14;SETEMBRO
+285235;PERIÓDICA;Refrigeração;Refrigeração;2026-09-21;Não Executada;AC2-P25-RF-AR12;SETEMBRO
+285236;PERIÓDICA;Refrigeração;Refrigeração;2026-09-11;Executada;AC2-P26-RF-AR13;SETEMBRO
+285237;PERIÓDICA;Refrigeração;Refrigeração;2026-09-27;Executada;AC2-P26-RF-AR13;SETEMBRO
+285238;PERIÓDICA;Refrigeração;Refrigeração;2026-09-11;Executada;AC2-P26-RF-AR14;SETEMBRO
+285239;PERIÓDICA;Refrigeração;Refrigeração;2026-09-27;Executada;AC2-P26-RF-AR14;SETEMBRO
 285240;PERIÓDICA;Refrigeração;Refrigeração;2026-09-12;Executada;AC2-P27-RF-AR15;SETEMBRO
 285241;PERIÓDICA;Refrigeração;Refrigeração;2026-09-28;Executada;AC2-P27-RF-AR15;SETEMBRO
 285242;PERIÓDICA;Refrigeração;Refrigeração;2026-09-12;Executada;AC2-P27-RF-AR16;SETEMBRO
-285243;PERIÓDICA;Refrigeração;Refrigeração;2026-09-28;Pendente;AC2-P27-RF-AR16;SETEMBRO
+285243;PERIÓDICA;Refrigeração;Refrigeração;2026-09-28;Executada;AC2-P27-RF-AR16;SETEMBRO
 285244;PERIÓDICA;Pontes Rolantes - Lubrificação;Garra 1;2026-09-13;Executada;AC2-PR-GAR-GAR1;SETEMBRO
-285245;PERIÓDICA;Pontes Rolantes - Lubrificação;Garra 1;2026-09-29;Pendente;AC2-PR-GAR-GAR1;SETEMBRO
+285245;PERIÓDICA;Pontes Rolantes - Lubrificação;Garra 1;2026-09-29;Executada;AC2-PR-GAR-GAR1;SETEMBRO
 285246;PERIÓDICA;Pontes Rolantes - Lubrificação;Garra 2;2026-09-10;Executada;AC2-PR-GAR-GAR2;SETEMBRO
 285247;PERIÓDICA;Pontes Rolantes - Lubrificação;Garra 2;2026-09-26;Executada;AC2-PR-GAR-GAR2;SETEMBRO
 285248;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 21;2026-09-01;Executada;AC2-PR21-INSP-00;SETEMBRO
@@ -3300,15 +3300,15 @@
 285260;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 21;2026-09-01;Pendente;AC2-PR21-INSP-45;SETEMBRO
 285261;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 21;2026-09-17;Executada;AC2-PR21-INSP-45;SETEMBRO
 285262;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 21;2026-09-12;Executada;AC2-PR21-INSP-46;SETEMBRO
-285263;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 21;2026-09-28;Pendente;AC2-PR21-INSP-46;SETEMBRO
+285263;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 21;2026-09-28;Executada;AC2-PR21-INSP-46;SETEMBRO
 285264;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 21;2026-09-12;Executada;AC2-PR21-INSP-47;SETEMBRO
-285265;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 21;2026-09-28;Pendente;AC2-PR21-INSP-47;SETEMBRO
+285265;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 21;2026-09-28;Executada;AC2-PR21-INSP-47;SETEMBRO
 285266;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 21;2026-09-12;Executada;AC2-PR21-INSP-48;SETEMBRO
-285267;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 21;2026-09-28;Pendente;AC2-PR21-INSP-48;SETEMBRO
+285267;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 21;2026-09-28;Executada;AC2-PR21-INSP-48;SETEMBRO
 285268;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 21;2026-09-12;Executada;AC2-PR21-INSP-49;SETEMBRO
-285269;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 21;2026-09-28;Pendente;AC2-PR21-INSP-49;SETEMBRO
+285269;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 21;2026-09-28;Executada;AC2-PR21-INSP-49;SETEMBRO
 285270;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 21;2026-09-12;Executada;AC2-PR21-INSP-50;SETEMBRO
-285271;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 21;2026-09-28;Pendente;AC2-PR21-INSP-50;SETEMBRO
+285271;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 21;2026-09-28;Executada;AC2-PR21-INSP-50;SETEMBRO
 285272;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 21;2026-09-01;Executada;AC2-PR21-LUBR-00;SETEMBRO
 285273;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 21;2026-09-17;Executada;AC2-PR21-LUBR-00;SETEMBRO
 285274;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 21;2026-09-01;Executada;AC2-PR21-LUBR-01;SETEMBRO
@@ -3341,24 +3341,24 @@
 285301;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 22;2026-09-12;Executada;AC2-PR22-INSP-56;SETEMBRO
 285302;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 22;2026-09-28;Executada;AC2-PR22-INSP-56;SETEMBRO
 285303;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 22;2026-09-13;Executada;AC2-PR22-LUBR-05;SETEMBRO
-285304;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 22;2026-09-29;Pendente;AC2-PR22-LUBR-05;SETEMBRO
+285304;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 22;2026-09-29;Executada;AC2-PR22-LUBR-05;SETEMBRO
 285305;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 22;2026-09-13;Executada;AC2-PR22-LUBR-06;SETEMBRO
-285306;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 22;2026-09-29;Pendente;AC2-PR22-LUBR-06;SETEMBRO
+285306;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 22;2026-09-29;Executada;AC2-PR22-LUBR-06;SETEMBRO
 285307;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 22;2026-09-11;Executada;AC2-PR22-LUBR-07;SETEMBRO
 285308;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 22;2026-09-11;Executada;AC2-PR22-LUBR-08;SETEMBRO
 285309;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 22;2026-09-11;Executada;AC2-PR22-LUBR-09;SETEMBRO
 285310;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 23;2026-09-06;Executada;AC2-PR23-INSP-12;SETEMBRO
-285311;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 23;2026-09-22;Pendente;AC2-PR23-INSP-12;SETEMBRO
+285311;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 23;2026-09-22;Executada;AC2-PR23-INSP-12;SETEMBRO
 285312;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 23;2026-09-06;Executada;AC2-PR23-INSP-13;SETEMBRO
-285313;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 23;2026-09-22;Pendente;AC2-PR23-INSP-13;SETEMBRO
+285313;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 23;2026-09-22;Executada;AC2-PR23-INSP-13;SETEMBRO
 285314;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 23;2026-09-01;Executada;AC2-PR23-INSP-14;SETEMBRO
-285315;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 23;2026-09-17;Pendente;AC2-PR23-INSP-14;SETEMBRO
+285315;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 23;2026-09-17;Executada;AC2-PR23-INSP-14;SETEMBRO
 285316;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 23;2026-09-06;Executada;AC2-PR23-INSP-15;SETEMBRO
-285317;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 23;2026-09-22;Pendente;AC2-PR23-INSP-15;SETEMBRO
+285317;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 23;2026-09-22;Executada;AC2-PR23-INSP-15;SETEMBRO
 285318;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 23;2026-09-06;Executada;AC2-PR23-INSP-16;SETEMBRO
-285319;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 23;2026-09-22;Pendente;AC2-PR23-INSP-16;SETEMBRO
+285319;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 23;2026-09-22;Executada;AC2-PR23-INSP-16;SETEMBRO
 285320;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 23;2026-09-01;Executada;AC2-PR23-INSP-17;SETEMBRO
-285321;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 23;2026-09-17;Pendente;AC2-PR23-INSP-17;SETEMBRO
+285321;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 23;2026-09-17;Executada;AC2-PR23-INSP-17;SETEMBRO
 285322;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 23;2026-09-13;Executada;AC2-PR23-INSP-57;SETEMBRO
 285323;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 23;2026-09-29;Executada;AC2-PR23-INSP-57;SETEMBRO
 285324;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 23;2026-09-13;Executada;AC2-PR23-INSP-58;SETEMBRO
@@ -3383,11 +3383,11 @@
 285343;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 24;2026-09-01;Executada;AC2-PR24-INSP-20;SETEMBRO
 285344;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 24;2026-09-17;Executada;AC2-PR24-INSP-20;SETEMBRO
 285345;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 24;2026-09-01;Executada;AC2-PR24-INSP-21;SETEMBRO
-285346;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 24;2026-09-17;Pendente;AC2-PR24-INSP-21;SETEMBRO
+285346;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 24;2026-09-17;Executada;AC2-PR24-INSP-21;SETEMBRO
 285347;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 24;2026-09-01;Executada;AC2-PR24-INSP-22;SETEMBRO
-285348;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 24;2026-09-17;Pendente;AC2-PR24-INSP-22;SETEMBRO
+285348;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 24;2026-09-17;Executada;AC2-PR24-INSP-22;SETEMBRO
 285349;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 24;2026-09-01;Executada;AC2-PR24-INSP-23;SETEMBRO
-285350;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 24;2026-09-17;Pendente;AC2-PR24-INSP-23;SETEMBRO
+285350;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 24;2026-09-17;Executada;AC2-PR24-INSP-23;SETEMBRO
 285351;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 24;2026-09-10;Executada;AC2-PR24-INSP-62;SETEMBRO
 285352;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 24;2026-09-26;Pendente;AC2-PR24-INSP-62;SETEMBRO
 285353;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 24;2026-09-10;Executada;AC2-PR24-INSP-63;SETEMBRO
@@ -3403,8 +3403,8 @@
 285363;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 24;2026-09-01;Pendente;AC2-PR24-LUBR-16;SETEMBRO
 285364;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 24;2026-09-17;Pendente;AC2-PR24-LUBR-16;SETEMBRO
 285365;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 24;2026-09-18;Executada;AC2-PR24-LUBR-17;SETEMBRO
-285366;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 24;2026-09-18;Pendente;AC2-PR24-LUBR-18;SETEMBRO
-285367;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 24;2026-09-18;Pendente;AC2-PR24-LUBR-41;SETEMBRO
+285366;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 24;2026-09-18;Executada;AC2-PR24-LUBR-18;SETEMBRO
+285367;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 24;2026-09-18;Executada;AC2-PR24-LUBR-41;SETEMBRO
 285368;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 25;2026-09-01;Executada;AC2-PR25-INSP-24;SETEMBRO
 285369;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 25;2026-09-17;Executada;AC2-PR25-INSP-24;SETEMBRO
 285370;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 25;2026-09-04;Executada;AC2-PR25-INSP-25;SETEMBRO
@@ -3415,16 +3415,16 @@
 285375;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 25;2026-09-17;Executada;AC2-PR25-INSP-27;SETEMBRO
 285376;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 25;2026-09-04;Executada;AC2-PR25-INSP-28;SETEMBRO
 285377;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 25;2026-09-20;Executada;AC2-PR25-INSP-28;SETEMBRO
-285378;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 25;2026-09-04;Pendente;AC2-PR25-INSP-67;SETEMBRO
-285379;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 25;2026-09-20;Pendente;AC2-PR25-INSP-67;SETEMBRO
-285380;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 25;2026-09-04;Pendente;AC2-PR25-INSP-68;SETEMBRO
-285381;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 25;2026-09-20;Pendente;AC2-PR25-INSP-68;SETEMBRO
+285378;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 25;2026-09-04;Executada;AC2-PR25-INSP-67;SETEMBRO
+285379;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 25;2026-09-20;Executada;AC2-PR25-INSP-67;SETEMBRO
+285380;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 25;2026-09-04;Executada;AC2-PR25-INSP-68;SETEMBRO
+285381;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 25;2026-09-20;Executada;AC2-PR25-INSP-68;SETEMBRO
 285382;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 25;2026-09-04;Executada;AC2-PR25-INSP-69;SETEMBRO
-285383;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 25;2026-09-20;Pendente;AC2-PR25-INSP-69;SETEMBRO
-285384;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 25;2026-09-04;Pendente;AC2-PR25-INSP-70;SETEMBRO
-285385;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 25;2026-09-20;Pendente;AC2-PR25-INSP-70;SETEMBRO
-285386;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 25;2026-09-04;Pendente;AC2-PR25-INSP-71;SETEMBRO
-285387;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 25;2026-09-20;Pendente;AC2-PR25-INSP-71;SETEMBRO
+285383;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 25;2026-09-20;Executada;AC2-PR25-INSP-69;SETEMBRO
+285384;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 25;2026-09-04;Executada;AC2-PR25-INSP-70;SETEMBRO
+285385;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 25;2026-09-20;Executada;AC2-PR25-INSP-70;SETEMBRO
+285386;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 25;2026-09-04;Executada;AC2-PR25-INSP-71;SETEMBRO
+285387;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 25;2026-09-20;Executada;AC2-PR25-INSP-71;SETEMBRO
 285388;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 25;2026-09-05;Executada;AC2-PR25-LUBR-20;SETEMBRO
 285389;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 25;2026-09-21;Executada;AC2-PR25-LUBR-20;SETEMBRO
 285390;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 25;2026-09-05;Executada;AC2-PR25-LUBR-21;SETEMBRO
@@ -3432,30 +3432,30 @@
 285392;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 25;2026-09-20;Executada;AC2-PR25-LUBR-22;SETEMBRO
 285393;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 25;2026-09-20;Executada;AC2-PR25-LUBR-23;SETEMBRO
 285394;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 25;2026-09-07;Executada;AC2-PR25-LUBR-24;SETEMBRO
-285395;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 26;2026-09-01;Pendente;AC2-PR26-INSP-29;SETEMBRO
+285395;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 26;2026-09-01;Executada;AC2-PR26-INSP-29;SETEMBRO
 285396;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 26;2026-09-17;Executada;AC2-PR26-INSP-29;SETEMBRO
 285397;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 26;2026-09-04;Executada;AC2-PR26-INSP-30;SETEMBRO
-285398;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 26;2026-09-20;Pendente;AC2-PR26-INSP-30;SETEMBRO
+285398;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 26;2026-09-20;Executada;AC2-PR26-INSP-30;SETEMBRO
 285399;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 26;2026-09-04;Executada;AC2-PR26-INSP-31;SETEMBRO
-285400;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 26;2026-09-20;Pendente;AC2-PR26-INSP-31;SETEMBRO
+285400;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 26;2026-09-20;Executada;AC2-PR26-INSP-31;SETEMBRO
 285401;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 26;2026-09-04;Executada;AC2-PR26-INSP-33;SETEMBRO
-285402;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 26;2026-09-20;Pendente;AC2-PR26-INSP-33;SETEMBRO
+285402;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 26;2026-09-20;Executada;AC2-PR26-INSP-33;SETEMBRO
 285403;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 26;2026-09-04;Executada;AC2-PR26-INSP-34;SETEMBRO
-285404;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 26;2026-09-20;Pendente;AC2-PR26-INSP-34;SETEMBRO
+285404;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 26;2026-09-20;Executada;AC2-PR26-INSP-34;SETEMBRO
 285405;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 26;2026-09-04;Executada;AC2-PR26-INSP-35;SETEMBRO
-285406;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 26;2026-09-20;Pendente;AC2-PR26-INSP-35;SETEMBRO
+285406;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 26;2026-09-20;Executada;AC2-PR26-INSP-35;SETEMBRO
 285407;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-11;Executada;AC2-PR26-INSP-72;SETEMBRO
-285408;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-27;Pendente;AC2-PR26-INSP-72;SETEMBRO
+285408;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-27;Executada;AC2-PR26-INSP-72;SETEMBRO
 285409;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-11;Executada;AC2-PR26-INSP-73;SETEMBRO
-285410;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-27;Pendente;AC2-PR26-INSP-73;SETEMBRO
+285410;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-27;Executada;AC2-PR26-INSP-73;SETEMBRO
 285411;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-11;Executada;AC2-PR26-INSP-74;SETEMBRO
-285412;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-27;Pendente;AC2-PR26-INSP-74;SETEMBRO
+285412;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-27;Executada;AC2-PR26-INSP-74;SETEMBRO
 285413;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-11;Executada;AC2-PR26-INSP-75;SETEMBRO
-285414;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-27;Pendente;AC2-PR26-INSP-75;SETEMBRO
+285414;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-27;Executada;AC2-PR26-INSP-75;SETEMBRO
 285415;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-11;Executada;AC2-PR26-INSP-76;SETEMBRO
-285416;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-27;Pendente;AC2-PR26-INSP-76;SETEMBRO
+285416;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-27;Executada;AC2-PR26-INSP-76;SETEMBRO
 285417;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-11;Executada;AC2-PR26-INSP-77;SETEMBRO
-285418;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-27;Pendente;AC2-PR26-INSP-77;SETEMBRO
+285418;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-27;Executada;AC2-PR26-INSP-77;SETEMBRO
 285419;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 26;2026-09-11;Executada;AC2-PR26-LUBR-25;SETEMBRO
 285420;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 26;2026-09-27;Executada;AC2-PR26-LUBR-25;SETEMBRO
 285421;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 26;2026-09-11;Executada;AC2-PR26-LUBR-26;SETEMBRO
@@ -3506,8 +3506,8 @@
 285466;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte 28;2026-09-24;Executada;AC2-PR28-LUBR-37;SETEMBRO
 285467;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte Rolante;2026-09-17;Executada;AC2-REDUT-ELEV1;SETEMBRO
 285468;PERIÓDICA;Pontes Rolantes - Lubrificação;Ponte Rolante;2026-09-10;Executada;AC2-REDUT-ELEV2;SETEMBRO
-285548;PERIÓDICA;Lingotamento Contínuo - Hidráulica;FEA;2026-09-12;Pendente;AC2-FEA-PRD-SH01;SETEMBRO
-285549;PERIÓDICA;FEA - Elétrica;FEA;2026-09-01;Pendente;AC2-FEA-REV-AB01;SETEMBRO
+285548;PERIÓDICA;Lingotamento Contínuo - Hidráulica;FEA;2026-09-12;Executada;AC2-FEA-PRD-SH01;SETEMBRO
+285549;PERIÓDICA;FEA - Elétrica;FEA;2026-09-01;Executada;AC2-FEA-REV-AB01;SETEMBRO
 285550;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Forno Elétrico;2026-09-12;Pendente;AC2-FP-PRD-SHI01;SETEMBRO
 285551;PERIÓDICA;Forno Panela - Elétrica;Não informado;2026-09-01;Executada;AC2-FP-REV-CAP01;SETEMBRO
 285552;PERIÓDICA;Lingotamento Contínuo - Hidráulica;Lingotamento Contínuo;2026-09-12;Pendente;AC2-LC-PRD-SHI01;SETEMBRO
@@ -3563,19 +3563,19 @@
 285602;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 23;2026-09-12;Executada;AC2-PR23-REV-025;SETEMBRO
 285603;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 23;2026-09-11;Executada;AC2-PR23-REV-028;SETEMBRO
 285604;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 23;2026-09-09;Executada;AC2-PR23-REV-053;SETEMBRO
-285605;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 23;2026-09-25;Pendente;AC2-PR23-REV-053;SETEMBRO
+285605;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 23;2026-09-25;Executada;AC2-PR23-REV-053;SETEMBRO
 285606;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 23;2026-09-09;Executada;AC2-PR23-REV-054;SETEMBRO
-285607;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 23;2026-09-25;Pendente;AC2-PR23-REV-054;SETEMBRO
+285607;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 23;2026-09-25;Executada;AC2-PR23-REV-054;SETEMBRO
 285608;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 23;2026-09-09;Executada;AC2-PR23-REV-055;SETEMBRO
-285609;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 23;2026-09-25;Pendente;AC2-PR23-REV-055;SETEMBRO
+285609;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 23;2026-09-25;Executada;AC2-PR23-REV-055;SETEMBRO
 285610;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 23;2026-09-09;Executada;AC2-PR23-REV-056;SETEMBRO
-285611;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 23;2026-09-25;Pendente;AC2-PR23-REV-056;SETEMBRO
+285611;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 23;2026-09-25;Executada;AC2-PR23-REV-056;SETEMBRO
 285612;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 23;2026-09-09;Executada;AC2-PR23-REV-057;SETEMBRO
-285613;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 23;2026-09-25;Pendente;AC2-PR23-REV-057;SETEMBRO
+285613;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 23;2026-09-25;Executada;AC2-PR23-REV-057;SETEMBRO
 285614;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 24;2026-09-18;Executada;AC2-PR24-REV-030;SETEMBRO
-285615;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 24;2026-09-18;Pendente;AC2-PR24-REV-032;SETEMBRO
-285616;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 24;2026-09-18;Pendente;AC2-PR24-REV-035;SETEMBRO
-285617;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 24;2026-09-12;Pendente;AC2-PR24-REV-036;SETEMBRO
+285615;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 24;2026-09-18;Executada;AC2-PR24-REV-032;SETEMBRO
+285616;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 24;2026-09-18;Executada;AC2-PR24-REV-035;SETEMBRO
+285617;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 24;2026-09-12;Executada;AC2-PR24-REV-036;SETEMBRO
 285618;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 24;2026-09-18;Executada;AC2-PR24-REV-039;SETEMBRO
 285619;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 24;2026-09-03;Pendente;AC2-PR24-REV-058;SETEMBRO
 285620;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 24;2026-09-19;Pendente;AC2-PR24-REV-058;SETEMBRO
@@ -3598,12 +3598,12 @@
 285637;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 26;2026-09-26;Executada;AC2-PR26-REV-071;SETEMBRO
 285638;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 26;2026-09-26;Executada;AC2-PR26-REV-073;SETEMBRO
 285639;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 26;2026-09-26;Executada;AC2-PR26-REV-075;SETEMBRO
-285640;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-26;Pendente;AC2-PR26-REV-096;SETEMBRO
-285641;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-26;Pendente;AC2-PR26-REV-097;SETEMBRO
-285642;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-26;Pendente;AC2-PR26-REV-098;SETEMBRO
-285643;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-26;Pendente;AC2-PR26-REV-099;SETEMBRO
-285644;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-26;Pendente;AC2-PR26-REV-100;SETEMBRO
-285645;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-26;Pendente;AC2-PR26-REV-101;SETEMBRO
+285640;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-26;Executada;AC2-PR26-REV-096;SETEMBRO
+285641;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-26;Executada;AC2-PR26-REV-097;SETEMBRO
+285642;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-26;Executada;AC2-PR26-REV-098;SETEMBRO
+285643;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-26;Executada;AC2-PR26-REV-099;SETEMBRO
+285644;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-26;Executada;AC2-PR26-REV-100;SETEMBRO
+285645;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 26;2026-09-26;Executada;AC2-PR26-REV-101;SETEMBRO
 285646;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 26;2026-09-26;Executada;AC2-PR26-REV-112;SETEMBRO
 285647;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 27;2026-09-13;Executada;AC2-PR27-REV-079;SETEMBRO
 285648;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 27;2026-09-13;Executada;AC2-PR27-REV-081;SETEMBRO
@@ -3616,9 +3616,9 @@
 285655;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 27;2026-09-13;Executada;AC2-PR27-REV-106;SETEMBRO
 285656;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 27;2026-09-13;Executada;AC2-PR27-REV-107;SETEMBRO
 285657;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 27;2026-09-13;Executada;AC2-PR27-REV-113;SETEMBRO
-285658;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 28;2026-09-25;Pendente;AC2-PR28-REV-087;SETEMBRO
-285659;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 28;2026-09-25;Pendente;AC2-PR28-REV-088;SETEMBRO
-285660;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 28;2026-09-25;Pendente;AC2-PR28-REV-089;SETEMBRO
+285658;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 28;2026-09-25;Executada;AC2-PR28-REV-087;SETEMBRO
+285659;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 28;2026-09-25;Executada;AC2-PR28-REV-088;SETEMBRO
+285660;PERIÓDICA;Pontes Rolantes - Mecânica;Ponte 28;2026-09-25;Executada;AC2-PR28-REV-089;SETEMBRO
 285661;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 28;2026-09-30;Pendente;AC2-PR28-REV-108;SETEMBRO
 285662;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 28;2026-09-30;Pendente;AC2-PR28-REV-109;SETEMBRO
 285663;PERIÓDICA;Pontes Rolantes - Elétrica;Ponte 28;2026-09-30;Pendente;AC2-PR28-REV-110;SETEMBRO
