@@ -117,6 +117,7 @@
           delete element.dataset.simecLocked;
         });
         addSession();
+        window.dispatchEvent(new CustomEvent('simec-authenticated', {detail:{userId:matricula}}));
       } else {
         error.textContent = 'Matrícula ou senha inválida. Digite sua matrícula nos dois campos.';
         input.select();
