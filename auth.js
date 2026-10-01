@@ -35,8 +35,13 @@
       .simec-welcome{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
       .simec-logout{border:0;border-radius:6px;padding:7px 11px;background:#151e75;color:#fff;font:600 13px "Segoe UI",Arial,sans-serif;cursor:pointer;white-space:nowrap}
       .simec-logout:hover{background:#252f94}
+      .portal .portal-topbar{position:relative;padding-left:180px;padding-right:180px}
+      .portal .portal-topbar .simec-session{position:absolute;right:14px;top:50%;bottom:auto;transform:translateY(-50%);max-width:170px;border:0;padding:0;background:transparent;color:#fff;box-shadow:none}
+      .portal .portal-topbar .simec-welcome{display:none}
+      .portal .portal-topbar .simec-logout{background:#fff;color:#151e75;padding:7px 16px}
+      .portal .portal-topbar .simec-logout:hover{background:#e8ebff}
       @media print{.simec-session,.simec-login{display:none!important}}
-      @media(max-width:520px){.simec-login-card{padding:27px 22px}.simec-login h1{font-size:24px}}
+      @media(max-width:520px){.simec-login-card{padding:27px 22px}.simec-login h1{font-size:24px}.portal .portal-topbar{padding-left:70px;padding-right:70px}.portal .portal-topbar .simec-session{right:8px}.portal .portal-topbar .simec-logout{padding:6px 10px}}
     `;
     document.head.appendChild(style);
   }
@@ -53,7 +58,7 @@
     const button = document.createElement('button');
     button.className = 'simec-logout';
     button.type = 'button';
-    button.textContent = 'Sair do portal';
+    button.textContent = document.body.classList.contains('portal') ? 'Sair' : 'Sair do portal';
     button.addEventListener('click', () => {
       sessionStorage.removeItem(ACCESS_KEY);
       sessionStorage.removeItem(NAME_KEY);
@@ -61,7 +66,7 @@
       location.href = 'index.html';
     });
     session.append(welcome, button);
-    document.body.appendChild(session);
+    (document.querySelector('.portal-topbar') || document.body).appendChild(session);
   }
 
   function unlock() {
