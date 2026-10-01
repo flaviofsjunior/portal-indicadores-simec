@@ -59,7 +59,7 @@ function monthlyReportData(){
  const comparison=comparisonMonths.map(label=>({label,metrics:measures(D.periodic.filter(r=>rowValue(r,'year')===year&&r.month===label))}));
  const areaNames=groups(periodicRows,'area');
  const areas=areaNames.map(area=>({area,metrics:measures(periodicRows.filter(r=>r.area===area))})).sort((a,b)=>b.metrics.rates[0]-a.metrics.rates[0]||a.area.localeCompare(b.area,'pt-BR'));
- const nonperiodicTypes=groups(executedNonperiodic,'type').map(type=>({type,count:executedNonperiodic.filter(r=>r.type===type).length})).sort((a,b)=>b.count-a.count);
+ const nonperiodicTypes=groups(executedNonperiodic,'type').filter(type=>!String(type).toLocaleLowerCase('pt-BR').includes('informado')).map(type=>({type,count:executedNonperiodic.filter(r=>r.type===type).length})).sort((a,b)=>b.count-a.count);
  return{year,month,periodicRows,periodicMeasures,unifiedRows,executed,executedPeriodic,executedNonperiodic,comparison,areas,nonperiodicTypes};
 }
 function managementText(){try{return localStorage.getItem(reportKey())||''}catch{return''}}
