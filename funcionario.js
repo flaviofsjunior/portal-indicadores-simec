@@ -9,10 +9,11 @@
   const people = (window.SIMEC_EMPLOYEES?.list?.() || window.SIMEC_PEOPLE || []).map(person => ({...person,id:String(person.id)}));
   const personMap = new Map(people.map(person => [person.id, person]));
   const planningMap = new Map((data.planning || []).map(item => [String(item.id), item]));
-  const state = {view:'training',training:[],trainingSearch:'',trainingStatus:'',week:currentWeek()};
+  const state = {view:'training',training:[],trainingSearch:'',trainingStatus:'',week:currentWeek(),teamWeek:currentWeek(),teamArea:'',teamMode:'week'};
   let currentId = '';
   let currentPerson = null;
   let scheduleRows = [];
+  let programmedRows = [];
 
   function currentWeek(){
     const now = new Date(), date = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate())), day = date.getUTCDay() || 7;
@@ -43,19 +44,51 @@
     const fallback=Number(item.plannedHours||0)/(ids.length||1);
     return ids.map(id=>({id,hours:hoursById.get(id)||fallback||0}));
   }
+  function audit(orderId){
+    try{const saved=JSON.parse(localStorage.getItem(`simec-backlog-audit-${orderId}`)||'null');if(saved)return{by:saved.by||saved.name||'',userId:String(saved.userId||saved.id||''),at:saved.at||''};}catch{}
+    const item=seed(orderId);return{by:item.modifiedBy||'',userId:String(item.modifiedUser||''),at:item.modifiedAt||''};
+  }
   function buildOrders(){
     const build=(row,type)=>({id:String(row.id),type,area:row.area||'Não informada',asset:row.asset||'—',assetName:row.assetName||'',description:row.description||row.service||'Atividade não informada',service:row.service||'',specialty:row.specialty||'',status:row.status||'',system:row.system||''});
     return [...(data.periodic||[]).map(row=>build(row,'Periódica')),...(data.nonperiodic||[]).map(row=>build(row,'Não periódica'))];
   }
   function buildSchedule(){
-    scheduleRows=[];
+    scheduleRows=[];programmedRows=[];
     for(const order of buildOrders()){
       if(stage(order.id)!=='04SC')continue;
-      const allocation=assignments(order.id).find(item=>String(item.id)===currentId);
-      if(!allocation||!week(order.id)||!day(order.id))continue;
-      scheduleRows.push({...order,week:week(order.id),day:day(order.id),stage:stage(order.id),hours:Number(allocation.hours)||0,resources:resource(order.id)});
+      const orderWeek=week(order.id),orderDay=day(order.id),allocations=assignments(order.id);
+      if(!orderWeek||!orderDay)continue;
+      const full={...order,week:orderWeek,day:orderDay,stage:'04SC',allocations,resources:resource(order.id),audit:audit(order.id)};
+      programmedRows.push(full);
+      const allocation=allocations.find(item=>String(item.id)===currentId);
+      if(allocation)scheduleRows.push({...full,hours:Number(allocation.hours)||0});
     }
+    programmedRows.sort((a,b)=>a.week.localeCompare(b.week)||WEEKDAYS.indexOf(a.day)-WEEKDAYS.indexOf(b.day)||a.id.localeCompare(b.id,'pt-BR',{numeric:true}));
     scheduleRows.sort((a,b)=>a.week.localeCompare(b.week)||WEEKDAYS.indexOf(a.day)-WEEKDAYS.indexOf(b.day)||a.id.localeCompare(b.id,'pt-BR',{numeric:true}));
+  }
+  function isSupervisor(){
+    const name=fold(currentPerson?.name),first=name.split(/\s+/)[0];
+    return !!name&&people.some(person=>{const supervisor=fold(person.supervisor);return supervisor===name||(supervisor&&supervisor.split(/\s+/)[0]===first);});
+  }
+  function canViewTeamProgramming(){
+    const area=fold(currentPerson?.area);
+    return ['1801','1502'].includes(currentId)||area.includes('pcm')||area.includes('engenharia de manutencao')||isSupervisor()||!!window.SIMEC_ACCESS?.canProgram?.();
+  }
+  function allocationArea(item){return personMap.get(String(item.id))?.area||'';}
+  function teamAreas(){
+    const values=new Set(people.map(person=>person.area).filter(Boolean));
+    programmedRows.forEach(row=>{if(row.area)values.add(row.area);row.allocations.forEach(item=>{const area=allocationArea(item);if(area)values.add(area);});});
+    return [...values].sort((a,b)=>a.localeCompare(b,'pt-BR'));
+  }
+  function teamRows(){
+    const mode=state.teamMode,area=state.teamArea;
+    return programmedRows.filter(row=>{
+      if(row.week!==state.teamWeek)return false;
+      if(mode==='mine')return row.audit.userId===currentId||fold(row.audit.by).includes(fold(currentPerson?.name));
+      if(mode==='preventive'&&row.type!=='Periódica')return false;
+      if(!area)return true;
+      return fold(row.area)===fold(area)||row.allocations.some(item=>fold(allocationArea(item))===fold(area));
+    });
   }
   function extractJsonObject(source,marker){
     const markerIndex=source.indexOf(marker);if(markerIndex<0)throw new Error('Base de treinamentos não localizada.');
@@ -99,18 +132,41 @@
     $('#schedule-board').innerHTML=WEEKDAYS.map(dayName=>{const daily=rows.filter(row=>row.day===dayName),cards=daily.map(row=>`<article class="personal-order"><strong>OS ${esc(row.id)}</strong><span>${esc(row.description)}</span><b>${row.hours.toLocaleString('pt-BR')} h</b><small>${esc(row.area)} · ${esc(row.asset)}</small></article>`).join('');return`<section class="personal-day"><header><strong>${esc(dayName.replace('-feira',''))}</strong><span>${daily.length}</span></header><div>${cards||'<p class="empty-day">Sem programação</p>'}</div></section>`;}).join('');
     $('#schedule-body').innerHTML=rows.map(row=>`<tr><td>${esc(row.day)}</td><td><strong>OS ${esc(row.id)}</strong><small>${esc(row.description)}</small></td><td>${esc(row.area)}</td><td>${esc(row.asset)}${row.assetName?`<small>${esc(row.assetName)}</small>`:''}</td><td><span class="status done">${esc(row.stage)}</span></td><td><strong>${row.hours.toLocaleString('pt-BR')} h</strong></td><td>${esc(row.resources||'—')}</td></tr>`).join('')||'<tr><td colspan="7">Nenhuma ordem programada para sua matrícula nesta semana.</td></tr>';
   }
-  function setView(view){state.view=view;document.querySelectorAll('[data-view]').forEach(button=>button.classList.toggle('active',button.dataset.view===view));$('#training-view').hidden=view!=='training';$('#schedule-view').hidden=view!=='schedule';}
+  function renderTeamOptions(){
+    const weeks=[...new Set([currentWeek(),...programmedRows.map(row=>row.week)])].filter(Boolean).sort();
+    if(!weeks.includes(state.teamWeek))state.teamWeek=weeks[0]||currentWeek();
+    $('#team-week').innerHTML=weeks.map(value=>`<option value="${esc(value)}" ${value===state.teamWeek?'selected':''}>${weekLabel(value)}</option>`).join('');
+    const areas=teamAreas();
+    if(!state.teamArea)state.teamArea=currentPerson?.area||areas[0]||'';
+    if(state.teamArea&&!areas.includes(state.teamArea))areas.unshift(state.teamArea);
+    $('#team-area').innerHTML=['<option value="">Todas as equipes</option>',...areas.map(value=>`<option value="${esc(value)}" ${value===state.teamArea?'selected':''}>${esc(value)}</option>`)].join('');
+    $('#team-mode').value=state.teamMode;$('#team-area-label').hidden=state.teamMode==='mine';
+  }
+  function renderTeamProgramming(){
+    renderTeamOptions();const rows=teamRows();
+    const totalHours=rows.reduce((sum,row)=>sum+row.allocations.reduce((s,item)=>s+(Number(item.hours)||0),0),0);
+    const professionals=new Set(rows.flatMap(row=>row.allocations.map(item=>String(item.id)))).size,areas=new Set(rows.map(row=>row.area)).size;
+    $('#team-kpis').innerHTML=[['Ordens',rows.length,weekLabel(state.teamWeek)],['Horas programadas',`${totalHours.toLocaleString('pt-BR')} h`,'Total da seleção'],['Profissionais',professionals,'Matrículas programadas'],['Áreas atendidas',areas,'Áreas das ordens']].map(([label,value,note])=>`<div><span>${label}</span><strong>${value}</strong><small>${note}</small></div>`).join('');
+    $('#team-board').innerHTML=WEEKDAYS.map(dayName=>{const daily=rows.filter(row=>row.day===dayName),cards=daily.map(row=>{const hours=row.allocations.reduce((sum,item)=>sum+(Number(item.hours)||0),0);return`<article class="personal-order"><strong>OS ${esc(row.id)}</strong><span>${esc(row.description)}</span><b>${hours.toLocaleString('pt-BR')} h</b><small>${esc(row.area)} · ${row.type==='Periódica'?'Preventiva':esc(row.type)}</small></article>`;}).join('');return`<section class="personal-day"><header><strong>${esc(dayName.replace('-feira',''))}</strong><span>${daily.length}</span></header><div>${cards||'<p class="empty-day">Sem programação</p>'}</div></section>`;}).join('');
+    $('#team-body').innerHTML=rows.map(row=>{const labor=row.allocations.map(item=>{const person=personMap.get(String(item.id));return`${person?.name||`Matrícula ${item.id}`} (${item.id}): ${(Number(item.hours)||0).toLocaleString('pt-BR')} h`;}).join('<br>')||'—';const hours=row.allocations.reduce((sum,item)=>sum+(Number(item.hours)||0),0);return`<tr><td>${esc(row.day)}</td><td><strong>OS ${esc(row.id)}</strong><small>${esc(row.description)}</small></td><td>${row.type==='Periódica'?'<span class="status progress">Preventiva</span>':esc(row.type)}</td><td>${esc(row.area)}</td><td>${esc(row.asset)}${row.assetName?`<small>${esc(row.assetName)}</small>`:''}</td><td>${labor}</td><td><strong>${hours.toLocaleString('pt-BR')} h</strong></td><td>${esc(row.audit.by||row.audit.userId||'—')}</td></tr>`;}).join('')||'<tr><td colspan="8">Nenhuma programação encontrada nesta seleção.</td></tr>';
+  }
+  function printView(view){document.querySelectorAll('.employee-view').forEach(section=>section.classList.toggle('print-target',section.id===`${view}-view`));window.print();setTimeout(()=>document.querySelectorAll('.employee-view').forEach(section=>section.classList.remove('print-target')),0);}
+  function setView(view){if(view==='team'&&!canViewTeamProgramming())return;state.view=view;document.querySelectorAll('[data-view]').forEach(button=>button.classList.toggle('active',button.dataset.view===view));$('#training-view').hidden=view!=='training';$('#schedule-view').hidden=view!=='schedule';$('#team-view').hidden=view!=='team';if(view==='team')renderTeamProgramming();}
   function bind(){
     document.querySelectorAll('[data-view]').forEach(button=>button.onclick=()=>setView(button.dataset.view));
     $('#training-search').oninput=event=>{state.trainingSearch=event.target.value;renderTraining();};
     $('#training-status').onchange=event=>{state.trainingStatus=event.target.value;renderTraining();};
     $('#schedule-week').onchange=event=>{state.week=event.target.value;renderSchedule();};
-    $('#print-schedule').onclick=()=>window.print();
+    $('#print-schedule').onclick=()=>printView('schedule');
+    $('#team-mode').onchange=event=>{state.teamMode=event.target.value;renderTeamProgramming();};
+    $('#team-area').onchange=event=>{state.teamArea=event.target.value;renderTeamProgramming();};
+    $('#team-week').onchange=event=>{state.teamWeek=event.target.value;renderTeamProgramming();};
+    $('#print-team').onclick=()=>printView('team');
   }
   async function start(){
     const id=String(window.SIMEC_ACCESS?.currentId?.()||sessionStorage.getItem('simec_portal_usuario_v1')||'').replace(/\D/g,'');
     if(!id)return;
-    currentId=id;currentPerson=personMap.get(id)||{id,name:window.SIMEC_ACCESS?.currentName?.()||'Funcionário',area:'Cadastro não localizado'};renderProfile();buildSchedule();
+    currentId=id;currentPerson=personMap.get(id)||{id,name:window.SIMEC_ACCESS?.currentName?.()||'Funcionário',area:'Cadastro não localizado'};renderProfile();buildSchedule();$('#team-tab').hidden=!canViewTeamProgramming();
     try{await loadTraining();$('#loading').hidden=true;renderTraining();renderSchedule();bind();setView('training');}
     catch(error){$('#loading').hidden=true;$('#load-error').hidden=false;$('#load-error').textContent=error.message||'Não foi possível carregar os dados.';renderSchedule();bind();setView('schedule');}
   }

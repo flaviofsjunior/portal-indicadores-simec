@@ -93,3 +93,6 @@ body.maintenance{background:#f0f5f8;color:#243746;--maintenance:#0057b8}
 
 /* Painel individual */
 .employee-access{--accent:#0b7d75}.employee-access .access-icon{background:#e6f7f4}@media(min-width:751px){.access-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* Gestão da produção */
+.production-access{--accent:#d97917}.production-access .access-icon{background:#fff1dd;color:#a85b00}
